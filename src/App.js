@@ -3,13 +3,11 @@ import {BrowserRouter as Router, Navigate, Routes, Route} from 'react-router-dom
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import Home from './pages/Home'
 import Header from './components/Header';
+import Product from './pages/Product';
 
 function App() {
-
-  console.log('first')
 
   return (
     <>
@@ -17,8 +15,8 @@ function App() {
         <Header />
         <div className='container mt-12 mx-auto py-4'>
           <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/product/:id' element={<Product />} />
             <Route path='*' element={<Navigate to='/' replace={false} />} />
           </Routes>
         </div>

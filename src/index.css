@@ -7,7 +7,7 @@
   margin: 0;
 }
 
-button,input{
+button,input, select{
   outline: none;
 }
 
@@ -18,4 +18,18 @@ a{
 
 li{
   list-style-type: none;
+}
+
+img{
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+.disable{
+  opacity: 0.4;
+}
+
+.activePage{
+  border: 1px solid;
 }
